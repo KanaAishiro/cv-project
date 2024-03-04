@@ -1,0 +1,66 @@
+@use './variables' as *;
+@mixin card-background {
+    background: $card-background-single-color;
+    background: $card-background-gradient-color;
+}
+
+@mixin body-background {
+    background: $body-background-single-color;
+    background: $body-background-gradient-color;
+}
+
+@mixin grid-template-size($column-size, $row-size) {
+    grid-template-columns: [col1] $column-size 
+                           [col2] $column-size 
+                           [col3] $column-size 
+                           [col4] $column-size 
+                           [col5] $column-size
+                           [col6] $column-size
+                           [col7] $column-size
+                           [col8] $column-size
+                           [col9] $column-size
+                           [col10] $column-size;
+
+    grid-template-rows:    [row1] $row-size 
+                           [row2] $row-size 
+                           [row3] $row-size 
+                           [row4] $row-size
+                           [row5] $row-size 
+                           [row6] $row-size 
+                           [row7] $row-size 
+                           [row8] $row-size;
+}
+
+@mixin grid-gap-size($row-gap, $column-gap) {
+    row-gap: $row-gap;
+    column-gap: $column-gap;
+}
+
+@mixin card-grid-size($x-start, $y-start, $width, $height) {
+    grid-area: $x-start / $y-start / span $width / span $height;
+}
+
+@mixin namefont($color) {
+    color: $color;
+    font-family: $selected-font-family;
+    font-size: $name-font-size;
+    font-weight: $name-font-weight;
+}
+
+@mixin primaryfont($color) {
+    color: $color;
+    font-family: $selected-font-family;
+    font-size: $primary-header-font-size;
+    font-weight: $primary-header-font-weight;
+}
+
+@mixin normalfont($color) {
+    color: $color;
+    font-family: $selected-font-family;
+    font-size: $normal-text-font-size;
+    font-weight: $normal-text-font-weight;
+}
+@mixin scriptfotn($color) {
+    color: $color;
+    font-family: "";
+}

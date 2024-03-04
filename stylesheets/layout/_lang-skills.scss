@@ -1,0 +1,39 @@
+@use '../utils/main' as *;
+.lang-skills {
+    
+    .languages-wrapper {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        gap:20px;
+
+        @include normalfont($text-color-dark);
+
+        .first-column{    
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: flex-start;
+            gap: 30px;
+            
+        }
+
+        .second-column {
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: flex-end;
+            text-align: end;
+            gap: 30px;
+        }
+        
+        .line-separator {
+            min-height: 150px;
+            border: 1px solid $primary-color-dark;
+        }
+    }
+}

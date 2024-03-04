@@ -1,0 +1,41 @@
+@use '../utils/main' as *;
+
+.my-image {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    
+    .smart-border {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 14px;
+        width: 422px;
+        background: rgb(17,72,85);
+        background: linear-gradient(0deg, rgba(17,72,85,1) 0%,
+                                        rgba(61,177,205,1) 50%,
+                                        rgba(65,187,217,1) 100%);
+    }
+
+    .photo {
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+        border-radius: 12px;
+        box-shadow: 8px 8px 24px 0px #1f1f1f;
+    }
+    .line:first-child {
+        height: 0px;
+        width: calc(100% - 20px);
+
+        border: 1px solid #48ACF0;
+    }
+    .line:last-child {
+        height: 0px;
+        width: calc(100% - 20px);
+
+        border: 1px solid #114855;
+    }
+}

@@ -1,0 +1,23 @@
+@use "../utils/main" as *;
+
+.about-me {
+    padding: 20px;
+
+    h1 {
+        margin: 0;
+        @include namefont($text-color-light);
+    }
+    
+    h2 {
+        margin-top:0;
+        @include primaryfont($text-color-light);
+    }
+
+    p {
+        @include normalfont($text-color-dark);
+    }
+
+    .about-wrapper {
+        margin-top: 20px;
+    }
+}

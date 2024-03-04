@@ -1,0 +1,19 @@
+@use '../utils/main' as *;
+
+body 
+{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    
+    @include body-background;
+}
+
+.card-wrapper {
+    display: grid;
+    padding: 54px 54px 0 54px ;
+    
+    @include grid-template-size(144px,128px);
+    @include grid-gap-size(16px,18px);
+}
