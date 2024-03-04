@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Tymofii Soliar CV</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="js/contactsFunctions.js"></script>
+</head>
+<body>
+    <div class="card-wrapper">
+
+        <div class="card my-image">
+            <div class="line"></div>
+            <div class="smart-border">
+                <img class="photo" src="./img/cv-photo.jpg" alt="" srcset="">
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="card about-me">
+            <h1>
+                Tymofii Soliar
+            </h1>
+            <h2>
+                C# .NET Developer
+            </h2>
+            <div class="about-wrapper">
+                <p>
+                    I am highly motivated junior C# .NET Developer 
+                    who is ready to become a part of a professional team. 
+                    I have got some experience in creating simple .NET Applications and I'm aimed to grow in this direction.
+                    I'm really fond of working in team, 
+                    ready for new tasks and open for new technologies.
+                </p>
+            </div>
+        </div>
+        <div class="card small-info-card personal">
+            <h2>Personal</h2>
+            <ul class="skills-wrapper">
+                <li>Date of birth: 01.05.2005</li>
+                <li>Location: Poland</li>
+                <li>Citizenship: Ukrainian</li>
+                <li>Status: Student</li>
+            </ul>
+        </div>
+
+        <div class="card small-info-card soft-skills">
+            <h2>Soft skills</h2>
+            <ul class="skills-wrapper">
+                <li>GTD</li>
+                <li>Creative</li>
+                <li>Responsible and Hardworking</li>
+                <li>Self-motivated</li>
+                <li>Scrum</li>
+                <li>Agile</li>
+            </ul>
+        </div>
+
+        <div class="card small-info-card tech-skills">
+            <h2>Technical skills</h2>
+            <ul class="skills-wrapper">
+                <li>C# 12.0</li>
+                <li>.NET Framework / .NET Core</li>
+                <li>WinForms, WPF, UWP</li>
+                <li>HTML/CSS/SASS</li>
+                <li>GIT</li>
+            </ul>
+        </div>
+
+        <div class="card small-info-card lang-skills">
+            <h2>Languages</h2>
+            <div class="languages-wrapper">
+               <div class="first-column">
+                <span>Ukrainian</span>
+                <span>Polish</span>
+                <span>Russian</span>
+                <span>English</span>
+               </div>
+               <div class="line-separator"></div>
+               <div class="second-column">
+                <span><b>[</b>Native<b>]</b></span>
+                <span><b>[</b>Fluent<b>]</b></span>
+                <span><b>[</b>Fluent<b>]</b></span>
+                <span><b>[</b>Advanced<b>]</b></span>
+               </div>
+            </div>
+        </div>
+
+        <div class="card small-info-card proj-experience">
+            <h2>Project experience</h2>
+            <ol class="project-list">
+                <li>
+                    <div class="list-item-header-wrapper">
+                        <a href="http://" class="project-name">WebMasters</a>
+                        <span class="tech-name"><b>[</b>HTML5 / CSS3<b>]</b></span>
+                    </div>
+                    <p class="project-description">Simple SPA that is intended to introduce company to new customers</p>
+                    <a href="" class="additional-link">Project GitHub</a>\
+                    
+                </li>
+            </ol>
+        </div>
+
+        <div class="card small-info-card work-experience">
+            <h2>Work experience</h2>
+        </div>
+
+        <div class="card contacts">
+            <div class="small-card" id="phoneContact" onmouseenter="onHoverAnimation(this.id)" onmouseleave="returnToInitialState()">
+                <button class="icon-box" onclick="">
+                    <svg width="40" height="40" class="icon icon-phone" >
+                        <use href="./img/symbol-defs.svg#icon-phone"></use>
+                    </svg>
+                </button>
+                <div class="small-text-wrapper hidden visually-hidden">
+                    <span>Phone number</span>
+                    <a href="tel:+48661331185">+48 661 331 185</a>
+                </div>
+            </div>
+
+            <div class="small-card" id="mailContact" onmouseenter="onHoverAnimation(this.id)" onmouseleave="returnToInitialState()">
+                <button class="icon-box" onclick="">
+                    <svg width="40" height="40" class="icon icon-mail" >
+                        <use href="./img/symbol-defs.svg#icon-mail"></use>
+                    </svg>
+                </button>
+                <div class="small-text-wrapper hidden visually-hidden">
+                    <span>Phone number</span>
+                    <a href="tel:+48661331185">+48 661 331 185</a>
+                </div>
+            </div>
+
+            <div class="small-card" id="githubContact" onmouseenter="onHoverAnimation(this.id)" onmouseleave="returnToInitialState()">
+                <button class="icon-box" onclick="clipOnHoverState(id)">
+                    <svg width="40" height="40" class="icon icon-github">
+                        <use href="./img/symbol-defs.svg#icon-github"></use>
+                    </svg>
+                </button>
+                <div class="small-text-wrapper hidden visually-hidden">
+                    <span>Phone number</span>
+                    <a href="tel:+48661331185">+48 661 331 185</a>
+                </div>
+            </div>
+            
+            <div class="small-card" id="linkedinContact" onmouseenter="onHoverAnimation(this.id)" onmouseleave="returnToInitialState()">
+                <button class="icon-box" onclick="clipOnHoverState(id)">
+                    <svg width="40" height="40" class="icon icon-linkedin">
+                        <use href="./img/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                </button>
+                <div class="small-text-wrapper hidden visually-hidden">
+                    <span>Phone number</span>
+                    <a href="tel:+48661331185">+48 661 331 185</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card small-info-card education">
+            <h2>Education</h2>
+        </div>
+    </div>
+</body>
+</html>

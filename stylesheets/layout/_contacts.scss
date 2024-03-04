@@ -1,0 +1,76 @@
+@use '../utils/main' as *;
+
+.contacts {
+    display: flex;
+
+    padding: 20px;
+
+    justify-content: space-between;
+
+    .small-card {
+
+        display: flex;
+        flex-direction: row;
+   
+        justify-content: flex-start;
+
+        gap: 14px;
+
+        padding: 14px;
+
+        width: 94px;
+        height: 94px;
+        
+        background-color: rgba(240, 255, 255, 0.8);
+        border-radius: 12px;
+
+        border: 1px solid $card-background-single-color;
+
+        transition: opacity 0.3s ease-in-out,
+                    flex-grow 0.3s ease-in-out;
+
+        .icon-box {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 20px;
+
+            width: 64px;
+            height: 64px;
+
+            cursor: pointer;
+
+            border-radius: 8px;
+            border: none;
+            background: rgb(240, 255, 255);
+
+            border: 1px solid $card-background-single-color;
+            
+            transition: background 0.5s ease-in-out;
+
+            .icon {
+                transition: all 0.5s ease-in-out;
+            }
+        }
+
+        .icon-box:hover {
+            background: $card-background-single-color;
+
+            .icon {
+                fill: rgb(240, 255, 255);
+            }
+        }
+        
+        .small-text-wrapper {
+            display: flex;
+
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+
+            transition: opacity 0.5s ease-in-out;
+        }
+    }
+}

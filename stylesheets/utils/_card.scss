@@ -1,0 +1,11 @@
+.card {
+    
+    padding: 20px;
+
+    border-radius: 12px;
+    
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+
+    @include card-background;
+}
+
