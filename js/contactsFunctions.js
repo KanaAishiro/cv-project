@@ -1,49 +1,48 @@
-function onHoverAnimation(id) 
-{   
-    const cardBox = document.querySelector(".contacts");
-    const hoveredItem = document.getElementById(id);
-    let childItem = hoveredItem.querySelector(".small-text-wrapper");
+let activeElementId = null;
 
-    if(!(hoveredItem.classList.contains("selected"))) {
-        for(const child of cardBox.children)
-        {
-            console.log(child.classList);
-            if(child != hoveredItem) {
-                child.classList.add('visually-hidden');
-                setTimeout(function () {
-                    child.classList.add("hidden");
-                }, 500);
-            }
+function onHoverAnimation(id) {
+    console.log("on hover animation");
+    const cardContainer = document.querySelector(".contacts");
+    let activeElement = document.getElementById(id);
+    const activeElementText = activeElement.querySelector(".small-text-wrapper");
+    activeElementId = id;
+    console.log(activeElement);
+    for(const child of cardContainer.children) {   
+        if(child != activeElement) {
+            child.addEventListener("transitionend", function () {
+                child.classList.add("hidden");
+                activeElement.addEventListener("transitionend", function () {
+                    activeElementText.classList.remove("hidden");
+                    activeElementText.classList.remove("visually-hidden");
+                });
+                activeElement.classList.add("selected");
+            });
+            child.classList.add("visually-hidden");
         }
-        setTimeout(function () {
-            hoveredItem.classList.add("selected");
-            setTimeout(function () {
-                childItem.classList.toggle("hidden");
-            }, 400);
-            setTimeout(function () {
-                childItem.classList.toggle("visually-hidden");
-            },500);
-        },500)
     }
 }
-
 function returnToInitialState() {
-    const cardBox = document.querySelector(".contacts");
-    const hoveredItem = document.querySelector(".selected");
-    const contactsText = hoveredItem.querySelector(".small-text-wrapper");
+    console.log("return to init state");
+    const cardContainer = document.querySelector(".contacts");
+    let activeElement = document.getElementById(activeElementId);
+    const activeElementText = activeElement.querySelector(".small-text-wrapper");
     
-    contactsText.classList.toggle("visually-hidden");
-    setTimeout(function () {
-        contactsText.classList.toggle("hidden");
-        hoveredItem.classList.remove("selected");
-        for(const child of cardBox.children) {
-            if(child.classList.contains("hidden"))
-            {
+    activeElementText.addEventListener("transitionend", function () {
+        activeElementText.classList.add("hidden");
+        activeElement.classList.remove("selected");
+        console.log("element hides");
+        console.log(activeElementText);
+
+        activeElement.addEventListener("transitionend", function () {
+            for(const child of cardContainer.children) {
                 child.classList.remove("hidden");
-                setTimeout(function () {
-                    child.classList.remove("visually-hidden")
-                }, 350);
+                child.classList.remove("visually-hidden");
+                
             }
-        }
-    }, 600);
+        });
+    });
+    activeElementText.classList.add("visually-hidden"); 
+    console.log(activeElement);
+    console.log(activeElementText);
+    
 }
