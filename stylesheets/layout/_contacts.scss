@@ -26,8 +26,7 @@
 
         border: 1px solid $card-background-single-color;
 
-        transition: opacity 0.3s ease-in-out,
-                    flex-grow 0.3s ease-in-out;
+        transition: all 0.5s ease-in-out;
 
         .icon-box {
             display: flex;
@@ -55,13 +54,13 @@
             }
         }
 
-        .icon-box:hover {
+       /* .icon-box:hover {
             background: $card-background-single-color;
 
             .icon {
                 fill: rgb(240, 255, 255);
             }
-        }
+        } */
         
         .small-text-wrapper {
             display: flex;
