@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <script src="js/contactsFunctions.js"></script>
+    <script src="js/contactsFunctions.js" defer></script>
 </head>
 <body>
     <div class="card-wrapper">
@@ -109,50 +109,50 @@
             <h2>Work experience</h2>
         </div>
 
-        <div class="card contacts" onmouseleave="returnToInitialState()">
-            <div class="small-card" id="phoneContact" onmouseenter="onHoverAnimation(this.id)">
-                <button class="icon-box" onclick="">
+        <div class="card contacts">
+            <div class="small-card" id="phoneContact">
+                <div class="icon-box">
                     <svg width="40" height="40" class="icon icon-phone" >
                         <use href="./img/symbol-defs.svg#icon-phone"></use>
                     </svg>
-                </button>
-                <div class="small-text-wrapper hidden visually-hidden">
+                </div>
+                <div class="small-text-wrapper">
                     <span>Phone number</span>
                     <a href="tel:+48661331185">+48 661 331 185</a>
                 </div>
             </div>
 
-            <div class="small-card" id="mailContact" onmouseenter="onHoverAnimation(this.id)">
-                <button class="icon-box" onclick="">
+            <div class="small-card" id="mailContact">
+                <div class="icon-box">
                     <svg width="40" height="40" class="icon icon-mail" >
                         <use href="./img/symbol-defs.svg#icon-mail"></use>
                     </svg>
-                </button>
-                <div class="small-text-wrapper hidden visually-hidden">
+                </div>
+                <div class="small-text-wrapper">
                     <span>Phone number</span>
                     <a href="tel:+48661331185">+48 661 331 185</a>
                 </div>
             </div>
 
-            <div class="small-card" id="githubContact" onmouseenter="onHoverAnimation(this.id)">
-                <button class="icon-box" onclick="clipOnHoverState(id)">
+            <div class="small-card" id="githubContact">
+                <div class="icon-box"lipOnHoverState(id)">
                     <svg width="40" height="40" class="icon icon-github">
                         <use href="./img/symbol-defs.svg#icon-github"></use>
                     </svg>
-                </button>
-                <div class="small-text-wrapper hidden visually-hidden">
+                </div>
+                <div class="small-text-wrapper">
                     <span>Phone number</span>
                     <a href="tel:+48661331185">+48 661 331 185</a>
                 </div>
             </div>
             
-            <div class="small-card" id="linkedinContact" onmouseenter="onHoverAnimation(this.id)">
-                <button class="icon-box" onclick="clipOnHoverState(id)">
+            <div class="small-card" id="linkedinContact">
+                <div class="icon-box"lipOnHoverState(id)">
                     <svg width="40" height="40" class="icon icon-linkedin">
                         <use href="./img/symbol-defs.svg#icon-linkedin"></use>
                     </svg>
-                </button>
-                <div class="small-text-wrapper hidden visually-hidden">
+                </div>
+                <div class="small-text-wrapper">
                     <span>Phone number</span>
                     <a href="tel:+48661331185">+48 661 331 185</a>
                 </div>
